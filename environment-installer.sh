@@ -48,5 +48,12 @@ else
     exit 1
 fi
 
+# Install requirements for add-apt-repository
+sudo apt install software-properties-common
+# Add Meshtastic repo
+sudo add-apt-repository ppa:meshtastic/beta
+# Install meshtasticd
+sudo apt install meshtasticd
+
 echo "==== Installation abgeschlossen ===="
 echo "Starte mit: meshtastic --help"
