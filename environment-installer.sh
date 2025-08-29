@@ -48,6 +48,18 @@ else
     exit 1
 fi
 
+
+sudo apt update
+sudo apt install -y python3 python3-pip python3-venv python3-setuptools python3-wheel
+
+sudo apt install -y python3-serial
+pip3 install --upgrade meshtastic
+
+
+
+sudo usermod -aG dialout $USER
+
+
 # Install requirements for add-apt-repository
 sudo apt install software-properties-common
 # Add Meshtastic repo
